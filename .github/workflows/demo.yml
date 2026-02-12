@@ -41,9 +41,9 @@ jobs:
         uses: actions/download-artifact@v6
         with:
           name: dist-files
-      - name: Get out of the dist-files folder
-        run: cd ..
       - name: Output contents
-        run: ls -ltr
+        run: | 
+          cd ..
+          ls -ltr
       - name: Deploy
         run: echo "Deploying..."
